@@ -1,0 +1,410 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: #4be04b;
+}
+
+nav a, .auth-links a {
+    text-decoration: none;
+    color: #333;
+    margin: 0 1rem;
+    font-weight: bold; /* Make navigation text bold */
+}
+
+.active {
+    color: #007bff;
+    font-weight: bold;
+}
+
+.hero {
+    text-align: center;
+    padding: 2rem;
+    background-color: #e9ecef;
+}
+
+.features, .products-section, .item-detail, .create-post, .login-section, .signup-section {
+    padding: 2rem;
+    text-align: center;
+}
+
+.products-grid, .product-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.product-item img, .item-image {
+    width: 100%;
+    height: auto;
+}
+
+.details-btn, .purchase-btn, button {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+}
+
+input[type="text"], input[type="password"], input[type="email"] {
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #4be04b;
+    margin-top: auto;
+}
+
+/* Carousel Styles */
+.carousel {
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.carousel-item {
+    display: none;
+    width: 100%;
+    text-align: center;
+}
+
+.carousel-item.active {
+    display: block;
+}
+
+.carousel-item img {
+    max-width: 100%;
+    max-height: 500px;
+    height: auto;
+    width: auto;
+    display: block;
+    margin: auto;
+}
+
+@media (max-width: 768px) {
+    .products-grid, .product-items, .form-group {
+        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
+    }
+    .login-section, .signup-section {
+        width: 90%;
+    }
+}
+
+.review-form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 1rem;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.review-form .form-group {
+    margin-bottom: 20px;
+}
+
+.review-form label {
+    display: block;
+    margin-bottom: .5rem;
+}
+
+.review-form input[type="text"],
+.review-form input[type="file"],
+.review-form textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.submit-btn, .reset-btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.submit-btn {
+    background-color: #4CAF50; /* Green */
+    color: white;
+}
+
+.reset-btn {
+    background-color: #f44336; /* Red */
+    color: white;
+}
+
+.view-products-btn {
+    font-weight: bold; /* Makes the text bold */
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text color */
+    padding: 10px 20px; /* Padding for size */
+    border: none; /* Removes the border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Changes cursor to pointer on hover */
+    margin-top: 20px; /* Adds space between the products grid and the button */
+    text-decoration: none; /* Removes underline from text */
+    display: inline-block; /* Allows setting padding and margins */
+}
+
+.view-products-btn:hover {
+    background-color: #367b37; /* Darker shade of green for hover effect */
+}
+
+.product-item {
+    text-align: center;
+    border: 1px solid #ddd; /* Adds a light border around each product */
+    padding: 10px;
+    border-radius: 5px; /* Rounds the corners of the product border */
+    transition: transform 0.2s; /* Smooth transformation on hover */
+}
+
+.product-item a {
+    color: #333; /* Text color */
+    text-decoration: none; /* Removes underline */
+    display: block; /* Makes the link take up the full container space */
+    transition: color 0.2s; /* Smooth color transition on hover */
+}
+
+.product-item img {
+    width: auto;
+    max-width: 100%; /* Ensures the image fits the container */
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.product-item h3 {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.product-item p {
+    font-size: 16px;
+    color: #007bff; /* Price color */
+    font-weight: bold; /* Makes price text bold */
+}
+
+/* Hover effects */
+.product-item:hover {
+    transform: scale(1.05); /* Slightly enlarges the product item on hover */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Adds shadow effect for depth */
+}
+
+.product-item a:hover {
+    color: #007bff; /* Changes text color on hover */
+}
+
+
+
+
+/* Login and Signup Form Styling */
+.login-section, .signup-section {
+    background-color: #f9f9f9; /* Light background for visibility */
+    padding: 2rem;
+    border-radius: 10px; /* Rounded corners for a soft look */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    margin: 20px auto; /* Centering the form in the page */
+    width: 80%; /* Suitable width for forms */
+    max-width: 350px; /* Maximum width for better control */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-group {
+    margin-bottom: 20px; /* Space between form fields */
+    width: 100%; /* Full width to maintain consistent form size */
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem; /* Space below labels for clarity */
+    font-weight: bold; /* Bold font for labels */
+    color: #333; /* Dark color for better readability */
+}
+
+input[type="text"], input[type="password"], input[type="email"] {
+    width: 100%; /* Full width to fill form */
+    padding: 10px; /* Padding for comfort */
+    border: 1px solid #ccc; /* Subtle border */
+    border-radius: 5px; /* Match other inputs */
+    box-sizing: border-box; /* Include padding in width */
+}
+
+button {
+    width: 100%; /* Full width buttons */
+    padding: 10px 0; /* Padding top and bottom */
+    background-color: #4CAF50; /* Primary button color */
+    color: white; /* Text color for buttons */
+    border: none; /* No border for buttons */
+    border-radius: 5px; /* Rounded corners for buttons */
+    cursor: pointer; /* Cursor to pointer to indicate clickable */
+    margin-top: 10px; /* Space above the button */
+    font-weight: bold; /* Bold text for button */
+}
+
+button:hover {
+    background-color: #367b37; /* Darker color on hover */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .login-section, .signup-section {
+        width: 95%; /* More width on smaller screens */
+        padding: 20px; /* More padding for touch interaction */
+    }
+}
+
+
+/* FAQ SECTION */
+.faq-question {
+    cursor: pointer;
+    background-color: #f1f1f1;
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s;
+}
+
+.faq-question:hover {
+    background-color: #e0e0e0; /* Slightly darker on hover for better interaction feedback */
+}
+
+.faq-question::after {
+    font-size: 20px;
+    color: #888;
+}
+
+
+.faq-answer {
+    display: none;
+    padding: 10px;
+    margin: 5px;
+    border-left: 3px solid green;
+    border-radius: 0 0 5px 5px;
+    transition: all 0.5s ease; /* Smooth transition for expanding and collapsing */
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Smooth transition for answer panel */
+.faq-answer.collapsing {
+    transition: height 0.5s ease, opacity 0.5s ease;
+    height: 0;
+    opacity: 0;
+    padding: 0 10px;
+    margin: 0 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Define default light theme colors */
+:root {
+    --background-color: #fff;
+    --text-color: #333;
+    --header-bg-color: #f8f9fa;
+    --nav-link-color: #007bff;
+}
+
+/* Define dark theme colors */
+[data-theme="dark"] {
+    --background-color: #333;
+    --text-color: #fff;
+    --header-bg-color: #222;
+    --nav-link-color: #0d6efd;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+header {
+    background-color: var(--header-bg-color);
+}
+
+nav a {
+    color: var(--nav-link-color);
+}
+
+
+
+
+/*Back to top button css*/
+
+#back-to-top {
+    position: fixed;
+    bottom: 20px; /* Distance from the bottom */
+    right: 20px; /* Distance from the right */
+    width: 40px; /* Button width */
+    height: 40px; /* Button height */
+    font-size: 16px; /* Arrow size */
+    background-color: #01050a; /* Blue color */
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: none; /* Hidden by default */
+    z-index: 1000; /* Ensures it's above other elements */
+    border-radius: 50%; /* Circular button */
+    text-align: center;
+    line-height: 40px; /* Vertically center the arrow */
+    opacity: 0.7; /* Slightly transparent */
+}
+
+#back-to-top:hover {
+    opacity: 1; /* Fully opaque on hover */
+}
+

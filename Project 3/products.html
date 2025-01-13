@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage | BoilerFoods</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html"><img src="logo.png" alt="BoilerFoods Logo" style="height: 50px;"></a>
+                <button id="theme-toggle">Dark/Light Mode</button>
+            </div>
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="create_post.html">Review</a>
+            <a href="login_signup.html">Login/Sign Up</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="search-section">
+            <input type="text" id="searchBox" placeholder="Search products..." onkeyup="searchProducts()">
+        </section>
+        <section class="products-section">
+            <h2>Our Products</h2>
+            <div class="product-items">
+                <div class="product-item">
+                    <a href="single_item.html?product=1">
+                        <img src="product1.jpg" alt="Organic Tomatoes">
+                        <h3>Organic Tomatoes</h3>
+                        <p>$3.49</p>
+                    </a>
+                </div>
+                <div class="product-item">
+                    <a href="single_item.html?product=2">
+                        <img src="product2.jpg" alt="Organic Cauliflower">
+                        <h3>Organic Cauliflower</h3>
+                        <p>$3.86</p>
+                    </a>
+                </div>
+                <div class="product-item">
+                    <a href="single_item.html?product=3">
+                        <img src="product3.jpg" alt="Organic Onion">
+                        <h3>Organic Onion</h3>
+                        <p>$1.56</p>
+                    </a>
+                </div>
+                <div class="product-item">
+                    <a href="single_item.html?product=4">
+                        <img src="product4.jpg" alt="Organic Spinach">
+                        <h3>Organic Spinach</h3>
+                        <p>$2.99</p>
+                    </a>
+                </div>
+                <div class="product-item">
+                    <a href="single_item.html?product=5">
+                        <img src="product5.jpg" alt="Organic Jalapeño">
+                        <h3>Organic Jalapeño</h3>
+                        <p>$1.79</p>
+                    </a>
+                </div>
+                <div class="product-item">
+                    <a href="single_item.html?product=6">
+                        <img src="product6.jpg" alt="Organic Pumpkin">
+                        <h3>Organic Pumpkin</h3>
+                        <p>$2.79</p>
+                    </a>
+                </div>
+                <div class="product-item">
+                    <a href="single_item.html?product=7">
+                        <img src="product7.png" alt="Organic Broccoli">
+                        <h3>Organic Broccoli</h3>
+                        <p>$0.99</p>
+                    </a>
+                </div>
+                <div class="product-item">
+                    <a href="single_item.html?product=8">
+                        <img src="product8.png" alt="Organic Cucumber">
+                        <h3>Organic Cucumber</h3>
+                        <p>$1.00</p>
+                    </a>
+                </div>
+                <div class="product-item">
+                    <a href="single_item.html?product=9">
+                        <img src="product9.png" alt="Organic Carrot">
+                        <h3>Organic Carrot</h3>
+                        <p>$1.00</p>
+                    </a>
+                </div>
+                <div class="product-item">
+                    <a href="single_item.html?product=10">
+                        <img src="product10.png" alt="Organic Eggplant">
+                        <h3>Organic Eggplant</h3>
+                        <p>$1.00</p>
+                    </a>
+                </div>
+                <button id="back-to-top" style="display: none;">↑</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 BoilerFoods. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function searchProducts() {
+            let input = document.getElementById('searchBox').value.toLowerCase();
+            let productItems = document.querySelectorAll('.product-item');
+            for (let item of productItems) {
+                let title = item.querySelector('h3').textContent.toLowerCase();
+                if (title.includes(input)) {
+                    item.style.display = '';
+                } else {
+                    item.style.display = 'none';
+                }
+            }
+        }
+        
+    </script>
+    <script src="toggle.js"></script>
+    <script src="backtop.js"></script>
+</body>
+</html>

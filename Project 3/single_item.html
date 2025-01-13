@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage | BoilerFoods</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html"><img src="logo.png" alt="BoilerFoods Logo" style="height: 50px;"></a>
+                <button id="theme-toggle">Dark/Light Mode</button>
+            </div>
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="create_post.html">Review</a>
+            <a href="login_signup.html">Login/Sign Up</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="item-detail">
+            <img src="placeholder.jpg" alt="Item Name" class="item-image" id="productImage">
+            <h2 id="productName">Loading Product...</h2>
+            <p id="productPrice">Loading Price...</p>
+            <p id="productDescription">
+                Please wait, loading details...
+            </p>
+            <!-- Updated the button to use listItem() function -->
+            <a href="#" class="purchase-btn" onclick="listItem(getProductIdFromPage())">Buy</a>
+        </section>
+    </main>
+    <button id="back-to-top" style="display: none;">↑</button>
+    <footer>
+        <p>© 2024 BoilerFoods. All rights reserved.</p>
+    </footer>
+    <script src="product_details.js"></script>
+    <script src="toggle.js"></script>
+    <script src="backtop.js"></script>
+</body>
+</html>
