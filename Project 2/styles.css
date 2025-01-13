@@ -1,0 +1,232 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: #4be04b;
+}
+
+nav a, .auth-links a {
+    text-decoration: none;
+    color: #333;
+    margin: 0 1rem;
+    font-weight: bold; /* Make navigation text bold */
+}
+
+.active {
+    color: #007bff;
+    font-weight: bold; 
+}
+
+.hero {
+    text-align: center;
+    padding: 2rem;
+    background-color: #e9ecef;
+}
+
+.features, .products-section, .item-detail, .create-post, .login-section, .signup-section {
+    padding: 2rem;
+    text-align: center;
+}
+
+.products-grid, .product-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.product-item img, .item-image {
+    width: 100%;
+    height: auto;
+}
+
+.details-btn, .purchase-btn, button {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+}
+
+input[type="text"], input[type="password"], input[type="email"] {
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #4be04b;
+    margin-top: auto;
+}
+
+/* Carousel Styles */
+.carousel {
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.carousel-item {
+    display: none;
+    width: 100%;
+    text-align: center;
+}
+
+.carousel-item.active {
+    display: block;
+}
+
+.carousel-item img {
+    max-width: 100%;
+    max-height: 500px;
+    height: auto;
+    width: auto;
+    display: block;
+    margin: auto;
+}
+
+@media (max-width: 768px) {
+    .products-grid, .product-items, .form-group {
+        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
+    }
+    .login-section, .signup-section {
+        width: 90%;
+    }
+}
+
+
+.review-form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 1rem;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.review-form .form-group {
+    margin-bottom: 20px;
+}
+
+.review-form label {
+    display: block;
+    margin-bottom: .5rem;
+}
+
+.review-form input[type="text"],
+.review-form input[type="file"],
+.review-form textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.submit-btn, .reset-btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.submit-btn {
+    background-color: #4CAF50; /* Green */
+    color: white;
+}
+
+.reset-btn {
+    background-color: #f44336; /* Red */
+    color: white;
+}
+
+
+.view-products-btn {
+    font-weight: bold; /* Makes the text bold */
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text color */
+    padding: 10px 20px; /* Padding for size */
+    border: none; /* Removes the border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Changes cursor to pointer on hover */
+    margin-top: 20px; /* Adds space between the products grid and the button */
+    text-decoration: none; /* Removes underline from text */
+    display: inline-block; /* Allows setting padding and margins */
+}
+
+.view-products-btn:hover {
+    background-color: #367b37; /* Darker shade of green for hover effect */
+}
+
+
+
+
+
+.product-item {
+    text-align: center;
+    border: 1px solid #ddd; /* Adds a light border around each product */
+    padding: 10px;
+    border-radius: 5px; /* Rounds the corners of the product border */
+    transition: transform 0.2s; /* Smooth transformation on hover */
+}
+
+.product-item a {
+    color: #333; /* Text color */
+    text-decoration: none; /* Removes underline */
+    display: block; /* Makes the link take up the full container space */
+    transition: color 0.2s; /* Smooth color transition on hover */
+}
+
+.product-item img {
+    width: auto;
+    max-width: 100%; /* Ensures the image fits the container */
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.product-item h3 {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.product-item p {
+    font-size: 16px;
+    color: #007bff; /* Price color */
+    font-weight: bold; /* Makes price text bold */
+}
+
+/* Hover effects */
+.product-item:hover {
+    transform: scale(1.05); /* Slightly enlarges the product item on hover */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Adds shadow effect for depth */
+}
+
+.product-item a:hover {
+    color: #007bff; /* Changes text color on hover */
+}
